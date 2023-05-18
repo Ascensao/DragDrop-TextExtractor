@@ -11,7 +11,7 @@ namespace c_sharp_file2text
         public Form1()
         {
             InitializeComponent();
-            textBox1.Text = "Drag a .txt, .pdf, .png, or .jpg file here...";
+            textBox1.Text = "Drag and drop a file here [.txt, .pdf, .png, .jpg] ...";
         }
 
         private string extractTextFromPdf(string filePath)
@@ -44,7 +44,10 @@ namespace c_sharp_file2text
 
             foreach (string file in files)
             {
+                string fileName = System.IO.Path.GetFileName(file);
                 string extension = System.IO.Path.GetExtension(file);
+
+                this.Text = fileName;
 
                 if (extension == ".txt")
                 {
