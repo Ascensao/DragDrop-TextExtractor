@@ -1,8 +1,8 @@
-# C# File-to-Text Converter App
+# Drag & Drop Text Extractor
 
 This C# application allows you to extract text from various file formats, including .txt, .pdf, .png, and .jpg files. Simply drag and drop the supported file onto the application, and it will display the extracted text in a text box.
 
-## Buy me a coffe
+## Buy me a coffee
 Whether you use this project, have learned something from it, or just like it, please consider supporting it by buying me a coffee, so I can dedicate more time on open-source projects like this :)
 
 <a href="https://www.buymeacoffee.com/ascensao1" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
