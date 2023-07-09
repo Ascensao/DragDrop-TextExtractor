@@ -1,11 +1,6 @@
-# Drag & Drop Text Extractor
+# File2Text - Text Extractor
 
 This C# application allows you to extract text from various file formats, including .txt, .pdf, .png, and .jpg files. Simply drag and drop the supported file onto the application, and it will display the extracted text in a text box.
-
-## Buy me a coffee
-Whether you use this project, have learned something from it, or just like it, please consider supporting it by buying me a coffee, so I can dedicate more time on open-source projects like this :)
-
-<a href="https://www.buymeacoffee.com/ascensao1" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Requirements
 
@@ -14,7 +9,7 @@ Whether you use this project, have learned something from it, or just like it, p
 ## Getting Started
 
 1. Clone the repository or download the source code.
-2. Open the solution file (`c_sharp_file2text.sln`) in Visual Studio.
+2. Open the solution file (`file2text_text_extractor.sln`) in Visual Studio.
 3. Build the solution to ensure all dependencies are resolved.
 
 ## Usage
@@ -34,10 +29,8 @@ Whether you use this project, have learned something from it, or just like it, p
 
 Contributions are welcome! If you find any issues or have ideas for improvements, please feel free to open an issue or submit a pull request.
   
-## Author
-
-Bernardo Ascensao
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details.
+
+<a href="https://www.buymeacoffee.com/ascensao1" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
