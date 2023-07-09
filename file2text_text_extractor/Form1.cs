@@ -19,15 +19,22 @@ namespace c_sharp_file2text
         {
             StringBuilder sb = new StringBuilder();
 
-            using (PdfReader reader = new PdfReader(filePath))
+            try
             {
-                for (int pageNo = 1; pageNo <= reader.NumberOfPages; pageNo++)
+                using (PdfReader reader = new PdfReader(filePath))
                 {
-                    ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
-                    string text = PdfTextExtractor.GetTextFromPage(reader, pageNo, strategy);
-                    text = Encoding.UTF8.GetString(Encoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(text)));
-                    sb.AppendLine(text);
+                    for (int pageNo = 1; pageNo <= reader.NumberOfPages; pageNo++)
+                    {
+                        ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+                        string text = PdfTextExtractor.GetTextFromPage(reader, pageNo, strategy);
+                        text = Encoding.UTF8.GetString(Encoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(text)));
+                        sb.AppendLine(text);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while extracting text from the PDF: " + ex.Message);
             }
 
             return sb.ToString();
@@ -35,7 +42,18 @@ namespace c_sharp_file2text
 
         private string extractTextFromImage(string filePath)
         {
-            return new IronOcr.IronTesseract().Read(filePath).Text;
+            string text = string.Empty;
+
+            try
+            {
+                text = new IronOcr.IronTesseract().Read(filePath).Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while extracting text from the image: " + ex.Message);
+            }
+
+            return text;
         }
 
 
@@ -46,13 +64,20 @@ namespace c_sharp_file2text
             foreach (string file in files)
             {
                 string fileName = System.IO.Path.GetFileName(file);
-                string extension = System.IO.Path.GetExtension(file);
+                string extension = System.IO.Path.GetExtension(file).ToLower(); ;
 
                 this.Text = fileName;
 
                 if (extension == ".txt")
                 {
-                    textBox1.Text = File.ReadAllText(file);
+                    try
+                    {
+                        textBox1.Text = File.ReadAllText(file);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while reading the file: " + ex.Message);
+                    }
                 }
                 else if (extension == ".pdf")
                 {
