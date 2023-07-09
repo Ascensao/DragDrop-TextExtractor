@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ycAPznYD0Ew6aaGIrv9b5hFreSz7AVPzsnxDqmv1LA8jLCfcs9WZBk671TBdU5CDPZDK0DiiMVLGv8pkvyaPeA==",
+  "dgSpecHash": "2E9p2gmKdFF2BYRFcXvyEi4l4Yyxx1YNkfEc07cn9hdMUzFYc62B6RF+F3QmnbKNMVyVUvqMTKFXCloE0jF8IQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ascensao\\source\\repos\\1. GITHUB_PUBLIC\\c_sharp_file2text\\c_sharp_file2text\\c_sharp_file2text.csproj",
+  "projectFilePath": "C:\\Users\\Ascensao\\source\\repos\\2_c_sharp\\1_Github\\DragDrop-TextExtractor\\c_sharp_file2text\\c_sharp_file2text.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ascensao\\.nuget\\packages\\bitmiracle.libtiff.net\\2.4.649\\bitmiracle.libtiff.net.2.4.649.nupkg.sha512",
     "C:\\Users\\Ascensao\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
